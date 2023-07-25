@@ -1,4 +1,3 @@
-import { qualifications } from "constants";
 import "./data.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { BackArrow } from "constants/icons";
