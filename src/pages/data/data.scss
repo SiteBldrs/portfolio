@@ -1,0 +1,20 @@
+.qualification_container {
+  max-width: var(--mx-1);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  .qualification_cards {
+    gap: 7rem;
+    margin-top: 7rem;
+  }
+
+  .subtitle {
+    gap: 1rem;
+    color: var(--white-main);
+    cursor: var(--pointer);
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+}

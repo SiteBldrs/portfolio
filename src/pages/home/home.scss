@@ -1,0 +1,71 @@
+.home_container {
+  max-width: var(--mx-1);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  .title,
+  .subtitle {
+    max-width: var(--mx-2);
+    width: 100%;
+  }
+
+  .title {
+    color: var(--white-main);
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+    color: var(--white-tint-1);
+  }
+
+  .bottom_home-container {
+    margin-top: 7rem;
+    gap: 5rem;
+
+    .reviews_content {
+      .clients {
+        font-size: 2.5rem;
+        color: var(--white-main);
+        margin-bottom: 2rem;
+      }
+
+      .reviews_page {
+        margin-top: 1.5rem;
+        color: var(--yellow-main);
+        cursor: var(--pointer);
+        width: max-content;
+
+        span {
+          font-size: 13px;
+        }
+
+        svg {
+          font-size: 20px;
+          margin-bottom: -0.2rem;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        &:hover {
+          svg {
+            transform: translateX(1rem);
+          }
+        }
+      }
+    }
+
+    .form_container {
+      min-width: 40rem;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .bottom_home-container {
+      flex-direction: column;
+
+      .reviews_content {
+        gap: 1.5rem;
+      }
+    }
+  }
+}

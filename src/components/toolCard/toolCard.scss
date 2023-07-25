@@ -1,0 +1,111 @@
+.tool_card {
+  border-left: 1px solid var(--border-2);
+  padding-left: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  h2 {
+    font-size: 1.7rem;
+    color: var(--white-main);
+
+    a {
+      color: inherit;
+    }
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    color: var(--white-tint-1);
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    color: var(--white-tint-2);
+  }
+
+  .tool_card-left {
+    max-width: 25rem;
+    width: 100%;
+  }
+
+  .tool_card-right {
+    flex: 1;
+    gap: 3rem;
+
+    div {
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    border-left: none;
+    padding: 0;
+
+    .tool_card-left {
+      max-width: 100%;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.tool_card.loading {
+  .tool_card-left {
+    .isLoading {
+      width: 15rem;
+      height: 2rem;
+      border-radius: 3rem;
+    }
+  }
+
+  .tool_card-right {
+    width: 100%;
+
+    div {
+      width: 100%;
+      flex: 1;
+
+      h3 {
+        width: 25rem;
+      }
+
+      p {
+        margin-top: 1rem;
+
+        &:nth-child(2) {
+          width: 100%;
+          margin-top: 1.7rem;
+        }
+
+        &:nth-child(3) {
+          width: 62%;
+        }
+
+        &:nth-child(4) {
+          width: 47%;
+        }
+
+        &:nth-child(5) {
+          width: 50%;
+        }
+
+        &:nth-child(6) {
+          width: 85%;
+        }
+      }
+
+      .isLoading {
+        height: 1.5rem;
+        border-radius: 3rem;
+      }
+    }
+  }
+}

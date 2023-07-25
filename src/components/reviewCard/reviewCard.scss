@@ -1,0 +1,81 @@
+.review_card {
+  width: 100%;
+  border-radius: 2rem;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(0.95);
+    border-radius: inherit;
+    background-color: var(--black-tint-3);
+    transition: all 0.15s ease;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .review_card-container {
+    z-index: 1;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+
+    .date {
+      border-left: 1px solid var(--border-1);
+      padding-left: 1.5rem;
+
+      span {
+        font-size: 1.5rem;
+        color: var(--white-tint-1);
+      }
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      color: var(--white-main);
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+      color: var(--white-tint-2);
+    }
+
+    .stars {
+      margin-top: auto;
+      gap: 0.1rem;
+
+      svg {
+        color: var(--yellow-main);
+        font-size: 1.7rem;
+      }
+    }
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    aspect-ratio: none;
+    height: max-content;
+
+    &::before {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .project_card {
+      padding: 2rem;
+    }
+  }
+}

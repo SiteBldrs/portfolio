@@ -1,0 +1,240 @@
+header {
+  top: 0;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+
+  .nav_wrapper {
+    max-width: var(--mx-1);
+    margin: 0 auto;
+    gap: 1rem;
+    z-index: 10;
+
+    .nav_logo,
+    .right_nav {
+      max-width: 15rem;
+      width: 100%;
+    }
+
+    .nav_logo {
+      font-size: 1.4rem;
+      color: var(--white-main);
+      user-select: none;
+    }
+
+    .nav_container {
+      height: 4.5rem;
+      padding: 0 1.4rem;
+      font-weight: 500;
+      border-radius: 5rem;
+      background-color: var(--black-tint-2);
+      border: 1px solid var(--border-1);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+      z-index: 1;
+
+      .nav_link {
+        padding: 1.5rem;
+        cursor: var(--pointer);
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 5px;
+          border-radius: 100%;
+          opacity: 0;
+          transition: all 0.3s ease;
+          background-color: var(--white-tint-1);
+          filter: blur(3px);
+        }
+
+        span {
+          font-size: 1.4rem;
+          color: var(--white-tint-1);
+          transition: color 0.2s ease-in-out;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+            width: 70%;
+          }
+
+          span {
+            color: var(--white-main);
+          }
+        }
+      }
+
+      .active_link {
+        &::before {
+          opacity: 1;
+          width: 70%;
+          background-color: var(--yellow-main);
+        }
+
+        span {
+          color: var(--yellow-main);
+        }
+
+        &:hover {
+          span {
+            color: var(--yellow-main);
+          }
+        }
+      }
+    }
+
+    .right_nav {
+      gap: 1rem;
+
+      .menu,
+      .mode_toggler {
+        height: 4.5rem;
+        font-weight: 500;
+        padding: 0 1.2rem;
+        border-radius: 5rem;
+        background-color: var(--black-tint-2);
+        border: 1px solid var(--border-1);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+        gap: 0.5rem;
+        color: var(--white-main);
+        cursor: var(--pointer);
+      }
+
+      .menu {
+        padding: 0 1.2rem 0 2rem;
+        display: none;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+
+      svg {
+        flex: 1;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .mobile_menu {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 3rem 1.5rem;
+    z-index: 15;
+    display: none;
+    user-select: none;
+
+    .overlay {
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .mobile_menu-container {
+      z-index: 1;
+      max-width: 60rem;
+      width: 100%;
+      height: max-content;
+      padding: 2.5rem 3rem;
+      background-color: var(--black-tint-2);
+      margin: 0 auto;
+      border-radius: 2rem;
+      border: 1px solid var(--border-1);
+
+      .mobile_menu-top {
+        gap: 1rem;
+
+        p {
+          font-size: 1.5rem;
+          color: var(--white-tint-1);
+        }
+
+        svg {
+          font-size: 2rem;
+          color: var(--white-main);
+          cursor: var(--pointer);
+        }
+      }
+
+      .mobile_menu-bottom {
+        margin-top: 1.5rem;
+
+        .mobile_links {
+          cursor: var(--pointer);
+          font-size: 1.5rem;
+          color: var(--white-main);
+          padding: 1.5rem 0;
+          border-bottom: 1px solid var(--border-1);
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .nav_wrapper {
+      .nav_container {
+        display: none;
+      }
+
+      .right_nav {
+        .menu {
+          display: flex;
+        }
+      }
+    }
+
+    .mobile_menu {
+      display: flex;
+      opacity: 0;
+      pointer-events: none;
+
+      .overlay {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+      }
+
+      .mobile_menu-container {
+        transform: scale(0.85) translateY(-20px);
+        transform-origin: top;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.2s ease;
+        transition-delay: 0.2s;
+      }
+    }
+
+    .show_mobile-menu {
+      opacity: 1;
+      pointer-events: all;
+
+      .overlay {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .mobile_menu-container {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+  }
+}

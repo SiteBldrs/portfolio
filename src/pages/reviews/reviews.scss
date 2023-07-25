@@ -1,0 +1,31 @@
+.reviews_container {
+  max-width: var(--mx-1);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  .title,
+  .subtitle {
+    max-width: var(--mx-2);
+    width: 100%;
+  }
+
+  .title {
+    color: var(--white-main);
+  }
+
+  .subtitle {
+    margin-top: 2rem;
+    color: var(--white-tint-1);
+  }
+
+  .reviews_cards {
+    margin-top: 7rem;
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+
+  @media screen and (max-width: 600px) {
+    .reviews_cards {
+      grid-gap: 1.5rem;
+    }
+  }
+}
