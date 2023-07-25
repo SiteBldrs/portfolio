@@ -10,7 +10,7 @@ export const QualificationPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState("");
 
-  useEffect(() => {
+  const fetchData = () => {
     client
       .fetch(
         `*[_type == "qualifications"] {
@@ -32,7 +32,15 @@ export const QualificationPage = () => {
         setIsError(err.message);
         setIsLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [data]);
 
   return (
     <div className="qualification_container">

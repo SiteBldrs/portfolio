@@ -8,7 +8,7 @@ export const ProjectsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState("");
 
-  useEffect(() => {
+  const fetchData = () => {
     client
       .fetch(
         `*[_type == "projects"] {
@@ -27,7 +27,15 @@ export const ProjectsPage = () => {
         setIsError(err.message);
         setIsLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [data]);
 
   return (
     <div className="projects_container">

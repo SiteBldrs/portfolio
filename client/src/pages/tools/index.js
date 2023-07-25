@@ -8,7 +8,7 @@ export const ToolsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState("");
 
-  useEffect(() => {
+  const fetchData = () => {
     client
       .fetch(
         `*[_type == "tools"] {
@@ -25,7 +25,15 @@ export const ToolsPage = () => {
         setIsError(err.message);
         setIsLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [data]);
 
   return (
     <div className="tools_container">

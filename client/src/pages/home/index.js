@@ -11,7 +11,7 @@ export const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState("");
 
-  useEffect(() => {
+  const fetchData = () => {
     client
       .fetch(
         `*[_type == "qualifications"] {
@@ -32,7 +32,15 @@ export const HomePage = () => {
         setIsError(err.message);
         setIsLoading(false);
       });
+  };
+
+  useEffect(() => {
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    fetchData();
+  }, [data]);
 
   return (
     <div className="home_container">
