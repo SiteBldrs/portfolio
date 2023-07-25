@@ -37,23 +37,6 @@
   }
 }
 
-.dark {
-  // dark colors
-  --black-main: #000000;
-  --black-tint-1: #18181b;
-  --black-tint-2: #252529;
-  --black-tint-3: #202022;
-
-  --white-main: #f4f4f5;
-  --white-tint-1: #9e9fa6;
-  --white-tint-2: #717179;
-
-  --border-1: #353536;
-  --border-2: #28282d;
-
-  --yellow-main: #fede5a;
-}
-
 *,
 *::before,
 *::after {
@@ -77,11 +60,8 @@
 }
 
 html {
-  width: 100vw;
-  height: 100vh;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background-color: var(--black-main);
 
   @media screen and (min-width: 2560px) {
     font-size: 122.5%;
@@ -108,18 +88,26 @@ html {
     font-size: 45%;
   }
 
+  .dark {
+    // dark colors
+    --black-main: #000000;
+    --black-tint-1: #18181b;
+    --black-tint-2: #252529;
+    --black-tint-3: #202022;
+
+    --white-main: #f4f4f5;
+    --white-tint-1: #9e9fa6;
+    --white-tint-2: #717179;
+
+    --border-1: #353536;
+    --border-2: #28282d;
+
+    --yellow-main: #fede5a;
+  }
+
   body {
-    width: 100%;
-    height: 100%;
-    padding: 0 2rem;
-
-    @media screen and (max-width: 995px) {
-      padding: 0 1rem;
-    }
-
-    @media screen and (max-width: 600px) {
-      padding: 0;
-    }
+    width: 100vw;
+    height: 100vh;
 
     .relative {
       position: relative;
@@ -201,13 +189,32 @@ html {
       justify-content: flex-start;
     }
 
-    #root {
+    .app {
+      background-color: var(--black-main);
+      width: 100%;
+      height: 100%;
+      padding: 0 2rem;
+
+      @media screen and (max-width: 995px) {
+        padding: 0 1rem;
+      }
+
+      @media screen and (max-width: 600px) {
+        padding: 0;
+      }
+    }
+
+    .app_container {
       background-color: var(--black-tint-1);
       border-left: 1px solid var(--border-1);
       border-right: 1px solid var(--border-1);
       max-width: var(--mx);
       margin: 0 auto;
       min-height: 100%;
+
+      @media screen and (max-width: 600px) {
+        border: none;
+      }
     }
 
     .lazy-load-image-background {

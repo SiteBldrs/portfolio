@@ -6,7 +6,7 @@ import {
 import { LiaLinkSolid as UrlIcon } from "react-icons/lia";
 import { IoIosArrowRoundBack as BackArrow } from "react-icons/io";
 import { IoClose as CloseIcon } from "react-icons/io5";
-import { TbMoonFilled as DarkModeIcon } from "react-icons/tb";
+import { GoMoon as DarkModeIcon } from "react-icons/go";
 import { ImSun as LightModeIcon } from "react-icons/im";
 import { AiOutlineStar as StarIcon } from "react-icons/ai";
 import { AiOutlineFolderOpen as PreviewIcon } from "react-icons/ai";

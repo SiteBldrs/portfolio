@@ -10,10 +10,9 @@ import { useState } from "react";
 import { pathnames } from "constants";
 import { NavLink, useLocation } from "react-router-dom";
 
-export const HeaderComponent = () => {
-  const [toggleMode, setToggleMode] = useState(false);
-  const [toggleMenu, setToggleMenu] = useState(false);
+export const HeaderComponent = ({ setTheme, theme }) => {
   const { pathname } = useLocation();
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
     <header className="sticky">
@@ -44,9 +43,9 @@ export const HeaderComponent = () => {
           </div>
           <div
             className="mode_toggler flex items-center justify-center"
-            onClick={() => setToggleMode(!toggleMode)}
+            onClick={() => setTheme(!theme)}
           >
-            {toggleMode ? <LightModeIcon /> : <DarkModeIcon />}
+            {theme ? <LightModeIcon /> : <DarkModeIcon />}
           </div>
         </div>
       </div>

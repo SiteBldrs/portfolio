@@ -6,7 +6,7 @@ export const ReviewsPage = () => {
   return (
     <div className="reviews_container">
       <h1 className="title">
-        Client evaluations, reviews, and comments that I have received
+        Evaluations, reviews, and comments from clients.
       </h1>
       <p className="subtitle">
         Here are some of the testimonials I've received from clients I've worked
