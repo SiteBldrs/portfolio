@@ -1,22 +1,48 @@
+/* eslint-disable jsx-a11y/heading-has-content */
 import "./reviewCard.scss";
 import { Star } from "utilities";
+import moment from "moment";
 
-export const ReviewCardComponent = ({ name, createdAt, content, rating }) => {
+export const ReviewCardComponent = ({
+  clientName,
+  reviewContent,
+  dateAdded,
+  rating,
+}) => {
   return (
     <div className="review_card relative">
       <div className="review_card-container flex col">
         <div className="date">
-          <span>{createdAt}</span>
+          <span>{moment(dateAdded).format("MMMM Do, YYYY - h:mm A")}</span>
         </div>
 
-        <h2>{name}</h2>
+        <h2>{clientName}</h2>
 
-        <p>{content}</p>
+        <p>{reviewContent}</p>
 
-        <div className="stars flex items-center justify-end">
-          <Star rating={rating} />
+        <div className="stars flex items-center justify-between">
+          <div className="flex items-center">
+            <Star stars={rating} />
+          </div>
+          <p>{rating} out of 5 stars</p>
         </div>
       </div>
     </div>
   );
+};
+
+export const LoadingReviewCardComponent = ({ len }) => {
+  return Array.from({ length: len }).map((_, _key) => (
+    <div className="review_card relative isLoading" key={_key}>
+      <div className="review_card-container flex col">
+        <div className="date ">
+          <span />
+        </div>
+
+        <h2 />
+
+        <p />
+      </div>
+    </div>
+  ));
 };

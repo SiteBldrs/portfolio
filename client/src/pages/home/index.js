@@ -1,6 +1,10 @@
 import { QUALIFICATIONS } from "constants";
 import "./home.scss";
-import { QualifyCardComponent, ContactComponent } from "components";
+import {
+  QualifyCardComponent,
+  ContactComponent,
+  LoadingReviewCardComponent,
+} from "components";
 import { Link } from "react-router-dom";
 import { RightArrow } from "constants/icons";
 import { useEffect, useState } from "react";
@@ -58,10 +62,20 @@ export const HomePage = () => {
       </p>
 
       <div className="bottom_home-container flex justify-between">
-        <div className="reviews_content flex col">
-          <h2 className="clients">Some of my Qualifications</h2>
+        <div
+          className="reviews_content flex col"
+          style={{ gap: isLoading && "1.5rem" }}
+        >
+          <h2
+            className="clients"
+            style={{
+              marginBottom: !isLoading && "1rem",
+            }}
+          >
+            Some of my credentials
+          </h2>
           {isLoading ? (
-            <p>Please wait</p>
+            <LoadingReviewCardComponent len={2} />
           ) : isError ? (
             <p>{isError}</p>
           ) : (

@@ -5,7 +5,7 @@ import {
   LoadingProjectCardComponent,
 } from "./projectCard";
 import { ToolCardComponent, LoadingToolCardComponent } from "./toolCard";
-import { ReviewCardComponent } from "./reviewCard";
+import { ReviewCardComponent, LoadingReviewCardComponent } from "./reviewCard";
 import { ContactComponent } from "./contact";
 import { QualifyCardComponent } from "./qualifyCard";
 
@@ -17,6 +17,7 @@ export {
   ToolCardComponent,
   LoadingToolCardComponent,
   ReviewCardComponent,
+  LoadingReviewCardComponent,
   ContactComponent,
   QualifyCardComponent,
 };

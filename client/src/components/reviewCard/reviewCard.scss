@@ -48,12 +48,18 @@
     }
 
     .stars {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-2);
       margin-top: auto;
-      gap: 0.1rem;
 
-      svg {
+      span {
+        margin-right: 0.1rem;
         color: var(--yellow-main);
         font-size: 1.7rem;
+      }
+
+      p {
+        font-style: italic;
       }
     }
   }
@@ -77,5 +83,13 @@
     .project_card {
       padding: 2rem;
     }
+  }
+}
+
+.review_card.isLoading {
+  aspect-ratio: 1.7;
+
+  &::before {
+    display: none;
   }
 }

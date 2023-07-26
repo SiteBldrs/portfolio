@@ -1,4 +1,4 @@
-import { pathnames } from "constants";
+import { pathNames } from "constants";
 import "./footer.scss";
 import { NavLink } from "react-router-dom";
 
@@ -7,7 +7,7 @@ export const FooterComponent = () => {
     <footer>
       <div className="footer_container flex items-center justify-between">
         <div className="left_footer flex items-center">
-          {pathnames.map((path, _id) => (
+          {pathNames.map((path, _id) => (
             <NavLink
               to={path.path}
               className="footer_links"

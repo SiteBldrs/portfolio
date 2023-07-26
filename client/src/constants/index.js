@@ -13,7 +13,7 @@ export const ROOT = "/",
   QUALIFICATIONS = "/qualifications",
   NOTFOUND = "/*";
 
-export const pathnames = [
+export const pathNames = [
   {
     path: ROOT,
     element: "Home",
