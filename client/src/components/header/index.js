@@ -1,41 +1,56 @@
 import {
+  ROOT,
+  ABOUT,
+  PROJECTS,
+  TOOLS,
+  REVIEWS,
+  QUALIFICATIONS,
+} from "constants";
+import {
   DownArrow,
   UpArrow,
-  DarkModeIcon,
-  LightModeIcon,
   CloseIcon,
+  ErrorPageIcon,
+  QualificationsPageIcon,
+  ReviewsPageIcon,
+  ToolsPageIcon,
+  ProjectsPageIcon,
+  AboutPageIcon,
+  HomePageIcon,
+  AdjustmentIcon,
 } from "constants/icons";
 import "./header.scss";
-import { useState } from "react";
 import { pathNames } from "constants";
 import { NavLink, useLocation } from "react-router-dom";
 
-export const HeaderComponent = ({ setTheme, theme }) => {
+export const HeaderComponent = ({
+  setOpenThemeContainer,
+  toggleMenu,
+  setToggleMenu,
+}) => {
   const { pathname } = useLocation();
-  const [toggleMenu, setToggleMenu] = useState(false);
 
-  const formatPathname = (pathname) => {
-    if (pathname === "/") {
-      return "home";
-    } else if (pathname.startsWith("/about")) {
-      return pathname.replace("/about", "about");
-    } else if (pathname.startsWith("/projects")) {
-      return pathname.replace("/projects", "projects");
-    } else if (pathname.startsWith("/tools")) {
-      return pathname.replace("/tools", "tools");
-    } else if (pathname.startsWith("/reviews")) {
-      return pathname.replace("/reviews", "reviews");
-    } else {
-      return pathname;
-    }
-  };
-
-  const formattedPathname = formatPathname(pathname);
+  const selectedPath =
+    pathname === ROOT ? (
+      <HomePageIcon />
+    ) : pathname.startsWith(ABOUT) ? (
+      <AboutPageIcon />
+    ) : pathname.startsWith(PROJECTS) ? (
+      <ProjectsPageIcon />
+    ) : pathname.startsWith(TOOLS) ? (
+      <ToolsPageIcon />
+    ) : pathname.startsWith(REVIEWS) ? (
+      <ReviewsPageIcon />
+    ) : pathname.startsWith(QUALIFICATIONS) ? (
+      <QualificationsPageIcon />
+    ) : (
+      <ErrorPageIcon />
+    );
 
   return (
     <header className="sticky">
       <div className="nav_wrapper flex items-center justify-between">
-        <p className="nav_logo">current page - {formattedPathname}</p>
+        <div className="nav_logo">{selectedPath}</div>
         <nav className="nav_container flex items-center">
           {pathNames.map((path, _id) => (
             <NavLink
@@ -61,9 +76,9 @@ export const HeaderComponent = ({ setTheme, theme }) => {
           </div>
           <div
             className="mode_toggler flex items-center justify-center"
-            onClick={() => setTheme(!theme)}
+            onClick={() => setOpenThemeContainer(true)}
           >
-            {theme ? <LightModeIcon /> : <DarkModeIcon />}
+            <AdjustmentIcon />
           </div>
         </div>
       </div>
@@ -75,7 +90,7 @@ export const HeaderComponent = ({ setTheme, theme }) => {
         />
         <div className="mobile_menu-container">
           <div className="mobile_menu-top flex items-center justify-between">
-            <p>Navigation</p>
+            <p>{selectedPath}</p>
             <CloseIcon onClick={() => setToggleMenu(false)} />
           </div>
 

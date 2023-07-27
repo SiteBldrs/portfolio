@@ -1,4 +1,9 @@
-import { EmailIcon, UserIcon, MailToIcon } from "constants/icons";
+import {
+  EmailIcon,
+  FirstNameIcon,
+  LastNameIcon,
+  MailToIcon,
+} from "constants/icons";
 import "./contact.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -59,7 +64,7 @@ export const ContactComponent = () => {
       <form ref={formRef} onSubmit={sendEmail} className="flex col">
         <div className="form_holder relative">
           <div className="icon absolute">
-            <UserIcon />
+            <FirstNameIcon />
           </div>
           <input
             type="text"
@@ -71,7 +76,7 @@ export const ContactComponent = () => {
         </div>
         <div className="form_holder relative">
           <div className="icon absolute">
-            <UserIcon />
+            <LastNameIcon />
           </div>
           <input
             type="text"

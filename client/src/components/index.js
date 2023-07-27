@@ -8,6 +8,8 @@ import { ToolCardComponent, LoadingToolCardComponent } from "./toolCard";
 import { ReviewCardComponent, LoadingReviewCardComponent } from "./reviewCard";
 import { ContactComponent } from "./contact";
 import { QualifyCardComponent } from "./qualifyCard";
+import { ThemeComponent } from "./theme";
+import { ModalComponent } from "./modal";
 
 export {
   HeaderComponent,
@@ -20,4 +22,6 @@ export {
   LoadingReviewCardComponent,
   ContactComponent,
   QualifyCardComponent,
+  ThemeComponent,
+  ModalComponent,
 };

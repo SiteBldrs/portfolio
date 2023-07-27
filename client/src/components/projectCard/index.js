@@ -27,11 +27,7 @@ export const ProjectCardComponent = ({ name, description, url, image }) => {
 
           <span className="dot">&middot;</span>
 
-          <div
-            className="project_link flex items-center"
-            to={url}
-            target="_blank"
-          >
+          <div className="project_link flex items-center" target="_blank">
             <PreviewIcon />
             <span>preview</span>
           </div>

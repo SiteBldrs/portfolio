@@ -1,4 +1,8 @@
-import { ProjectCardComponent, LoadingProjectCardComponent } from "components";
+import {
+  ProjectCardComponent,
+  LoadingProjectCardComponent,
+  ModalComponent,
+} from "components";
 import "./projects.scss";
 import { useEffect, useState } from "react";
 import client from "utilities";
@@ -49,6 +53,8 @@ export const ProjectsPage = () => {
         suggestions for how to enhance it. You'll find a meaningful selection of
         web apps that I've created over my coding adventure here.
       </p>
+
+      {/* <ModalComponent /> */}
 
       <div
         className="project_cards grid"
