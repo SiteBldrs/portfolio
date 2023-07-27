@@ -7,6 +7,7 @@
   opacity: 0;
   pointer-events: none;
   user-select: none;
+  transition-delay: 0.3s;
 
   .overlay {
     width: 100%;
@@ -27,7 +28,7 @@
     z-index: 1;
     max-width: 40rem;
     width: 90%;
-    height: 100vh;
+    height: 100%;
     background-color: var(--black-tint-2);
     margin-left: auto;
     border-left: 1px solid var(--border-1);
@@ -35,11 +36,10 @@
     transform-origin: left;
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.2s ease;
-    transition-delay: 0.2s;
 
     .theme_header {
       padding: 2rem 1.5rem;
-      height: 6rem;
+      height: 6.1rem;
       border-bottom: 1px solid var(--border-1);
       color: var(--white-main);
 
@@ -54,7 +54,7 @@
     }
 
     .themes {
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       overflow-y: auto;
       height: calc(100% - 6rem);
       gap: 1.5rem;
@@ -64,17 +64,12 @@
         gap: 1.5rem;
       }
 
-      p {
-        font-size: 1.4rem;
-        color: var(--white-tint-2);
-      }
-
       .mobile_mode {
         display: none;
         gap: 3rem;
 
         .theme_image {
-          height: 40rem;
+          height: 50rem;
         }
       }
 
@@ -110,9 +105,9 @@
 }
 
 .open_theme {
-  display: flex;
   opacity: 1;
   pointer-events: all;
+  transition-delay: 0s;
 
   .overlay {
     opacity: 1;

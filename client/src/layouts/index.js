@@ -15,19 +15,15 @@ export const App = () => {
     localStorage.setItem("theme", selectedTheme);
   };
 
-  // useEffect to apply the saved theme preference when the component mounts
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
+    window.addEventListener("scroll", () => {
+      setToggleMenu(false);
+    });
+
     if (savedTheme) {
       setTheme(savedTheme);
     }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setOpenThemeContainer(false);
-      setToggleMenu(false);
-    });
   }, []);
 
   useEffect(() => {

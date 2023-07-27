@@ -14,7 +14,7 @@ header {
     .nav_logo,
     .right_nav {
       max-width: 15rem;
-      width: max-content;
+      width: 100%;
     }
 
     .nav_logo {
@@ -28,13 +28,7 @@ header {
     }
 
     .nav_container {
-      // padding: 0 1.4rem;
       font-weight: 500;
-      // border-radius: 5rem;
-      // background-color: var(--black-tint-2);
-      // border: 1px solid var(--border-1);
-      // backdrop-filter: blur(8px);
-      // overflow: hidden;
       z-index: 1;
 
       .nav_link {
@@ -96,24 +90,29 @@ header {
     .right_nav {
       gap: 0.5rem;
 
-      .menu,
-      .mode_toggler {
-        height: 4.5rem;
+      .menu {
+        height: 5rem;
         font-weight: 500;
         padding: 0 1.2rem;
         border-radius: 5rem;
         background-color: var(--black-tint-2);
         border: 1px solid var(--border-1);
-        backdrop-filter: blur(8px);
         overflow: hidden;
         gap: 0.5rem;
         color: var(--white-main);
         cursor: var(--pointer);
-      }
-
-      .menu {
         padding: 0 1.2rem 0 2rem;
         display: none;
+      }
+
+      .mode_toggler {
+        cursor: var(--pointer);
+        padding-left: 1rem;
+
+        svg {
+          font-size: 2.5rem;
+          color: var(--white-main);
+        }
       }
 
       span {
@@ -155,7 +154,7 @@ header {
       padding: 2.5rem 3rem;
       background-color: var(--black-tint-2);
       margin: 0 auto;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       border: 1px solid var(--border-1);
 
       .mobile_menu-top {
@@ -192,6 +191,10 @@ header {
   }
 
   @media screen and (max-width: 600px) {
+    border-bottom: 1px solid var(--border-2);
+    backdrop-filter: blur(0px);
+    background-color: var(--black-tint-1);
+
     .nav_wrapper {
       .nav_container {
         display: none;
@@ -208,6 +211,7 @@ header {
       display: flex;
       opacity: 0;
       pointer-events: none;
+      transition-delay: 0.3s;
 
       .overlay {
         opacity: 0;
@@ -220,13 +224,13 @@ header {
         transform-origin: top;
         opacity: 0;
         transition: transform 0.3s ease, opacity 0.2s ease;
-        transition-delay: 0.2s;
       }
     }
 
     .show_mobile-menu {
       opacity: 1;
       pointer-events: all;
+      transition-delay: 0s;
 
       .overlay {
         opacity: 1;

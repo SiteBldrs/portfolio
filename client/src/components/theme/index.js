@@ -56,13 +56,11 @@ export const ThemeComponent = ({
       />
       <div className="theme_content">
         <div className="theme_header flex items-center justify-between">
-          <p>Personalize your view</p>
+          <p>Modify the theme</p>
           <CloseIcon onClick={() => setOpenThemeContainer(false)} />
         </div>
 
         <div className="themes">
-          <p>To view the theme, please click on any of the images.</p>
-
           {/* desktop mode */}
           <div className="desktop_mode flex col">
             {desktopMode.map((mode, _key) => (
