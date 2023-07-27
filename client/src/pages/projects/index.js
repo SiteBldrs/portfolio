@@ -1,7 +1,7 @@
 import {
   ProjectCardComponent,
   LoadingProjectCardComponent,
-  ModalComponent,
+  // ModalComponent,
 } from "components";
 import "./projects.scss";
 import { useEffect, useState } from "react";
