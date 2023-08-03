@@ -1,5 +1,9 @@
 import "./tools.scss";
-import { ToolCardComponent, LoadingToolCardComponent } from "components";
+import {
+  ToolCardComponent,
+  LoadingToolCardComponent,
+  ErrorComponent,
+} from "components";
 import { useEffect, useState } from "react";
 import client from "utilities";
 
@@ -52,7 +56,7 @@ export const ToolsPage = () => {
         {isLoading ? (
           <LoadingToolCardComponent />
         ) : isError ? (
-          <p>{isError}</p>
+          <ErrorComponent />
         ) : (
           data?.map((item, _id) => <ToolCardComponent key={_id} {...item} />)
         )}

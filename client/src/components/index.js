@@ -9,6 +9,8 @@ import { ReviewCardComponent, LoadingReviewCardComponent } from "./reviewCard";
 import { ContactComponent } from "./contact";
 import { QualifyCardComponent } from "./qualifyCard";
 import { ThemeComponent } from "./theme";
+import { ErrorComponent } from "./error";
+import { LazyComponent } from "./lazy";
 
 export {
   HeaderComponent,
@@ -22,4 +24,6 @@ export {
   ContactComponent,
   QualifyCardComponent,
   ThemeComponent,
+  ErrorComponent,
+  LazyComponent,
 };

@@ -1,4 +1,8 @@
-import { LoadingReviewCardComponent, ReviewCardComponent } from "components";
+import {
+  ErrorComponent,
+  LoadingReviewCardComponent,
+  ReviewCardComponent,
+} from "components";
 import "./reviews.scss";
 import { useEffect, useState } from "react";
 import client from "utilities";
@@ -54,7 +58,7 @@ export const ReviewsPage = () => {
         {isLoading ? (
           <LoadingReviewCardComponent len={4} />
         ) : isError ? (
-          <p>{isError}</p>
+          <ErrorComponent />
         ) : (
           data?.map((review, _id) => (
             <ReviewCardComponent {...review} key={_id} />

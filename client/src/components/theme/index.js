@@ -7,8 +7,8 @@ import {
   lightModeMobile,
   deemModeMobile,
 } from "assets";
+import { LazyComponent } from "components/lazy";
 import { CloseIcon } from "constants/icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export const ThemeComponent = ({
   setOpenThemeContainer,
@@ -76,11 +76,7 @@ export const ThemeComponent = ({
                 key={_key}
               >
                 <div className="theme_image">
-                  <LazyLoadImage
-                    src={mode.image}
-                    alt={mode.name}
-                    effect="blur"
-                  />
+                  <LazyComponent src={mode.image} alt={mode.name} />
                 </div>
               </div>
             ))}
@@ -101,11 +97,7 @@ export const ThemeComponent = ({
                 key={_key}
               >
                 <div className="theme_image">
-                  <LazyLoadImage
-                    src={mode.image}
-                    alt={mode.name}
-                    effect="blur"
-                  />
+                  <LazyComponent src={mode.image} alt={mode.name} />
                 </div>
               </div>
             ))}

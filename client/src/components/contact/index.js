@@ -39,15 +39,18 @@ export const ContactComponent = () => {
         },
         (error) => {
           setIsLoading(false);
-          setIsError(error.text);
+          setIsError("Something went wrong");
           setIsSuccess(false);
-          toast.success(`${isError}: Something went wrong`);
+          toast.error(isError);
 
           setTimeout(() => {
             setIsSuccess(null);
           }, 2000);
         }
-      );
+      )
+      .catch((err) => {
+        toast.error(isError);
+      });
   };
 
   return (
@@ -71,7 +74,7 @@ export const ContactComponent = () => {
             placeholder="First Name"
             name="firstName"
             disabled={isLoading}
-            required
+            // required
           />
         </div>
         <div className="form_holder relative">
@@ -83,7 +86,7 @@ export const ContactComponent = () => {
             placeholder="Last Name"
             name="lastName"
             disabled={isLoading}
-            required
+            // required
           />
         </div>
         <div className="form_holder relative">
@@ -95,7 +98,7 @@ export const ContactComponent = () => {
             name="email"
             placeholder="Email address"
             disabled={isLoading}
-            required
+            // required
           />
         </div>
         <div className="form_holder relative">
@@ -104,7 +107,7 @@ export const ContactComponent = () => {
             disabled={isLoading}
             placeholder="Message"
             name="message"
-            required
+            // required
           />
         </div>
         <div className="form_holder relative">

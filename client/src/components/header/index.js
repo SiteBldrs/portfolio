@@ -32,19 +32,19 @@ export const HeaderComponent = ({
 
   const selectedPath =
     pathname === ROOT ? (
-      <HomePageIcon />
+      <HomePageIcon title="Home Page" />
     ) : pathname.startsWith(ABOUT) ? (
-      <AboutPageIcon />
+      <AboutPageIcon title="About Page" />
     ) : pathname.startsWith(PROJECTS) ? (
-      <ProjectsPageIcon />
+      <ProjectsPageIcon title="Projects Page" />
     ) : pathname.startsWith(TOOLS) ? (
-      <ToolsPageIcon />
+      <ToolsPageIcon title="Tools Page" />
     ) : pathname.startsWith(REVIEWS) ? (
-      <ReviewsPageIcon />
+      <ReviewsPageIcon title="Reviews Page" />
     ) : pathname.startsWith(QUALIFICATIONS) ? (
-      <QualificationsPageIcon />
+      <QualificationsPageIcon title="Qualifications Page" />
     ) : (
-      <ErrorPageIcon />
+      <ErrorPageIcon title="Page Not Found" />
     );
 
   return (

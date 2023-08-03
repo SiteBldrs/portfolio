@@ -6,6 +6,8 @@ import lightModeMobile from "./images/light-mobile.png";
 import deemMode from "./images/deem.png";
 import deemModeMobile from "./images/deem-mobile.png";
 
+import banner from "./images/banner.svg";
+
 export {
   me,
   darkMode,
@@ -14,4 +16,6 @@ export {
   darkModeMobile,
   lightModeMobile,
   deemModeMobile,
+  //
+  banner,
 };

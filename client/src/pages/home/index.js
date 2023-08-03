@@ -4,6 +4,7 @@ import {
   QualifyCardComponent,
   ContactComponent,
   LoadingReviewCardComponent,
+  ErrorComponent,
 } from "components";
 import { Link } from "react-router-dom";
 import { RightArrow } from "constants/icons";
@@ -77,7 +78,7 @@ export const HomePage = () => {
           {isLoading ? (
             <LoadingReviewCardComponent len={2} />
           ) : isError ? (
-            <p>{isError}</p>
+            <ErrorComponent />
           ) : (
             data
               ?.slice(0, 2)

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BackArrow } from "constants/icons";
 import { useEffect, useState } from "react";
 import client from "utilities";
+import { ErrorComponent, LoadingToolCardComponent } from "components";
 
 export const QualificationPage = () => {
   const navigate = useNavigate();
@@ -24,7 +25,6 @@ export const QualificationPage = () => {
       )
       .then((res) => {
         setData(res);
-        console.log(res);
         setIsLoading(false);
       })
       .catch((err) => {
@@ -43,16 +43,16 @@ export const QualificationPage = () => {
   }, [data]);
 
   return (
-    <div className="qualification_container">
+    <div className="qualification_container flex col">
       <h1 className="subtitle flex items-center" onClick={() => navigate(-1)}>
         <BackArrow />
         <span>Go back</span>
       </h1>
       <div className="qualification_cards flex col">
         {isLoading ? (
-          <p>Please wait...</p>
+          <LoadingToolCardComponent />
         ) : isError ? (
-          <p> {isError}</p>
+          <ErrorComponent />
         ) : (
           data?.map((data, _key) => (
             <div className="tool_card flex items-start" key={_key}>

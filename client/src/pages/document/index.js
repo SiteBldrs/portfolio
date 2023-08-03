@@ -2,14 +2,14 @@ import { EmailIcon } from "constants/icons";
 import "./document.scss";
 import { socials, about_content } from "constants";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { me } from "assets";
+import { LazyComponent } from "components";
 
 export const DocumentPage = () => {
   return (
     <div className="document_container flex justify-between">
       <div className="image_holder mobile_img">
-        <LazyLoadImage effect="blur" src={me} alt="Abdullahi Salihu" />
+        <LazyComponent src={me} alt="Abdullahi Salihu" />
       </div>
 
       <div className="document_container-left">
@@ -27,7 +27,7 @@ export const DocumentPage = () => {
 
       <div className="document_container-right flex col">
         <div className="image_holder desktop_img">
-          <LazyLoadImage effect="blur" src={me} alt="Abdullahi Salihu" />
+          <LazyComponent src={me} alt="Abdullahi Salihu" />
         </div>
         <div className="socials flex col">
           <div className="socials_top flex col">
@@ -40,7 +40,7 @@ export const DocumentPage = () => {
                 title={media.title}
               >
                 {media.icon}
-                <span>Follow me on {media.title}</span>
+                <span>{media.title}</span>
               </Link>
             ))}
           </div>

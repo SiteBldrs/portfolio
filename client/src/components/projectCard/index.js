@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import "./projectCard.scss";
 import { UrlIcon, PreviewIcon } from "constants/icons";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { urlFor } from "utilities";
+import { LazyComponent } from "components/lazy";
 
 export const ProjectCardComponent = ({ name, description, url, image }) => {
   return (
     <div className="project_card-container relative">
       <div className="project_card flex col">
         <div className="project_image">
-          <LazyLoadImage effect="blur" src={urlFor(image).url()} alt={name} />
+          <LazyComponent src={urlFor(image).url()} alt={name} />
         </div>
         <h2>{name}</h2>
         <p>{description}</p>

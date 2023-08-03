@@ -1,12 +1,16 @@
-import { ProjectCardComponent, LoadingProjectCardComponent } from "components";
+import {
+  ProjectCardComponent,
+  LoadingProjectCardComponent,
+  ErrorComponent,
+} from "components";
 import "./projects.scss";
 import { useEffect, useState } from "react";
 import client from "utilities";
 
 export const ProjectsPage = () => {
   const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = () => {
     client
@@ -33,9 +37,9 @@ export const ProjectsPage = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    fetchData();
-  }, [data]);
+  // useEffect(() => {
+  //   fetchData();
+  // }, [data])
 
   return (
     <div className="projects_container">
@@ -59,7 +63,7 @@ export const ProjectsPage = () => {
         {isLoading ? (
           <LoadingProjectCardComponent />
         ) : isError ? (
-          <p>{isError}</p>
+          <ErrorComponent />
         ) : (
           data?.map((project, _id) => (
             <ProjectCardComponent {...project} key={_id} />

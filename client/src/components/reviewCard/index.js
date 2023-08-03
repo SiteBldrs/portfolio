@@ -20,7 +20,7 @@ export const ReviewCardComponent = ({
 
         <p>{reviewContent}</p>
 
-        <div className="stars flex items-center justify-between">
+        <div className="stars flex col items-end">
           <div className="flex items-center">
             <Star stars={rating} />
           </div>

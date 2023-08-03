@@ -2,10 +2,10 @@
   max-width: var(--mx-1);
   margin: 0 auto;
   padding: 0 1.5rem;
+  gap: 10rem;
 
   .qualification_cards {
     gap: 7rem;
-    margin-top: 7rem;
   }
 
   .subtitle {
@@ -16,5 +16,9 @@
     svg {
       font-size: 2rem;
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    gap: 5rem;
   }
 }

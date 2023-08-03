@@ -1,3 +1,4 @@
+import { banner } from "assets";
 import { HeaderComponent, FooterComponent, ThemeComponent } from "components";
 import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
@@ -32,6 +33,8 @@ export const App = () => {
 
   return (
     <div className={`app ${theme === "light" ? "" : theme}`}>
+      <img src={banner} alt="" className="fixed banner" />
+
       <div className="app_container">
         <HeaderComponent
           setToggleMenu={setToggleMenu}
