@@ -154,6 +154,10 @@
     .project_card {
       padding: 2rem 0;
       gap: 1rem;
+
+      .project_image {
+        padding-right: 1.5rem;
+      }
     }
   }
 }
