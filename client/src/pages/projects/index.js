@@ -19,7 +19,9 @@ export const ProjectsPage = () => {
           name,
           description,
           url,
-          image
+          textStacks,
+          imageDesktop,
+          imageMobile
       } | order(_createdAt desc)`
       )
       .then((res) => {
@@ -39,25 +41,27 @@ export const ProjectsPage = () => {
 
   // useEffect(() => {
   //   fetchData();
-  // }, [data])
+  // }, [data]);
 
   return (
     <div className="projects_container">
-      <h1 className="title">
-        A list of my completed code projects is provided below.
-      </h1>
-      <p className="subtitle">
-        I've worked on a lot of little projects over the years, but these are my
-        favorites. Many of them are open-source, so if you discover anything
-        that interests you, check out the code and contribute if you have
-        suggestions for how to enhance it. You'll find a meaningful selection of
-        web apps that I've created over my coding adventure here.
-      </p>
+      <div className="project_container-details">
+        <h1 className="title">
+          A list of my completed code projects is provided below.
+        </h1>
+        <p className="subtitle">
+          I've worked on a lot of little projects over the years, but these are
+          my favorites. Many of them are open-source, so if you discover
+          anything that interests you, check out the code and contribute if you
+          have suggestions for how to enhance it. You'll find a meaningful
+          selection of web apps that I've created over my coding adventure here.
+        </p>
+      </div>
 
       <div
-        className="project_cards grid"
+        className="project_cards flex col"
         style={{
-          gridGap: isLoading && "1rem",
+          gap: isLoading && "1rem",
         }}
       >
         {isLoading ? (
