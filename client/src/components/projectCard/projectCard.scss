@@ -14,12 +14,13 @@
     .project_image {
       max-width: 50rem;
       width: 100%;
+      height: 100%;
 
       .mobile {
         bottom: 0;
         right: 0;
         width: max-content;
-        height: 80%;
+        height: 70%;
       }
 
       img {
@@ -31,7 +32,7 @@
       max-width: 56.5rem;
       width: 100%;
       gap: 1.5rem;
-      padding: 2rem 0 0;
+      padding: 2rem;
 
       .project_con {
         gap: 0.5rem;
@@ -156,7 +157,13 @@
       gap: 1rem;
 
       .project_image {
-        padding-right: 2rem;
+        aspect-ratio: 1.5;
+      }
+
+      .project_details {
+        background-color: var(--black-tint-3);
+        padding: 1.5rem;
+        border-radius: 1rem;
       }
     }
   }
@@ -176,6 +183,9 @@
 
     .project_details {
       width: 100%;
+      background-color: transparent;
+      padding: 2rem;
+      padding-bottom: 0;
 
       span {
         height: 1.5rem;

@@ -39,9 +39,9 @@ export const ProjectsPage = () => {
     fetchData();
   }, []);
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, [data]);
+  useEffect(() => {
+    fetchData();
+  }, [data]);
 
   return (
     <div className="projects_container">
