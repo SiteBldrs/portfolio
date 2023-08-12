@@ -191,9 +191,10 @@ header {
   }
 
   @media screen and (max-width: 600px) {
-    border-bottom: 1px solid var(--border-2);
-    backdrop-filter: blur(0px);
-    background-color: var(--black-tint-1);
+    // border-bottom: 1px solid var(--border-2);
+    // backdrop-filter: blur(0px);
+    // background-color: var(--black-tint-1);
+    padding: 1rem 1.5rem;
 
     .nav_wrapper {
       .nav_container {
