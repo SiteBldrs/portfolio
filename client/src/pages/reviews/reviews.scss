@@ -16,6 +16,14 @@
   .subtitle {
     margin-top: 2rem;
     color: var(--white-tint-1);
+
+    a {
+      color: var(--yellow-main);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .reviews_cards {

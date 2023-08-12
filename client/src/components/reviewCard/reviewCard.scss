@@ -29,6 +29,7 @@
     .date {
       border-left: 1px solid var(--border-1);
       padding-left: 1.5rem;
+      transition: padding-left 0.2s ease;
 
       span {
         font-size: 1.5rem;
@@ -49,7 +50,7 @@
 
     .stars {
       padding-top: 1rem;
-      border-top: 1px solid var(--border-2);
+      border-top: 1px solid var(--border-1);
       margin-top: auto;
 
       span {
@@ -70,6 +71,13 @@
   }
 
   &:hover {
+    .review_card-container {
+      .date {
+        padding-left: 0;
+        border: none;
+      }
+    }
+
     &::before {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
@@ -85,8 +93,11 @@
       transform: translate(-50%, -50%) scale(1);
     }
 
-    .project_card {
-      padding: 2rem;
+    .review_card-container {
+      .date {
+        padding-left: 0;
+        border: none;
+      }
     }
   }
 }
