@@ -36,6 +36,7 @@ export const QualificationPage = () => {
 
   useEffect(() => {
     fetchData();
+    document.title = "Credentials";
   }, []);
 
   useEffect(() => {

@@ -37,6 +37,7 @@ export const ProjectsPage = () => {
 
   useEffect(() => {
     fetchData();
+    document.title = "Projects I've worked on";
   }, []);
 
   useEffect(() => {

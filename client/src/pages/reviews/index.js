@@ -36,6 +36,7 @@ export const ReviewsPage = () => {
 
   useEffect(() => {
     fetchData();
+    document.title = "Review by Client's";
   }, []);
 
   useEffect(() => {

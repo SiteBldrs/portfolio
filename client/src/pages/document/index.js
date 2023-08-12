@@ -4,8 +4,13 @@ import { socials, about_content } from "constants";
 import { Link } from "react-router-dom";
 import { me } from "assets";
 import { LazyComponent } from "components";
+import { useEffect } from "react";
 
 export const DocumentPage = () => {
+  useEffect(() => {
+    document.title = "Concerning myself";
+  }, []);
+
   return (
     <div className="document_container flex justify-between">
       <div className="image_holder mobile_img">

@@ -41,6 +41,7 @@ export const HomePage = () => {
 
   useEffect(() => {
     fetchData();
+    document.title = "Abdullahi Salihu ~ Portfolio";
   }, []);
 
   useEffect(() => {
@@ -86,12 +87,12 @@ export const HomePage = () => {
                 <QualifyCardComponent {...review} key={_id} />
               ))
           )}
-          {data?.length >= 3 && (
+          {data?.length >= 2 && (
             <Link
               className="reviews_page flex items-center"
               to={QUALIFICATIONS}
             >
-              <span>See more</span>
+              <span>View all</span>
               <RightArrow />
             </Link>
           )}

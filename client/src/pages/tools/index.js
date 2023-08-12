@@ -33,6 +33,7 @@ export const ToolsPage = () => {
 
   useEffect(() => {
     fetchData();
+    document.title = "My development tools";
   }, []);
 
   useEffect(() => {
