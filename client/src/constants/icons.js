@@ -3,7 +3,7 @@ import {
   BiChevronUp as UpArrow,
   BiChevronsRight as RightArrow,
 } from "react-icons/bi";
-import { LiaLinkSolid as UrlIcon } from "react-icons/lia";
+import { IoOpenOutline as UrlIcon } from "react-icons/io5";
 import { IoIosArrowRoundBack as BackArrow } from "react-icons/io";
 import { IoClose as CloseIcon } from "react-icons/io5";
 import { HiOutlineAdjustmentsHorizontal as AdjustmentIcon } from "react-icons/hi2";
@@ -28,6 +28,7 @@ import {
   PiUsers as LastNameIcon,
 } from "react-icons/pi";
 import { TbBrandMailgun as MailToIcon } from "react-icons/tb";
+import { IoConstructOutline as ConstructionIcon } from "react-icons/io5";
 
 // socials
 import { TbBrandTwitterFilled as TwitterIcon } from "react-icons/tb";
@@ -62,4 +63,5 @@ export {
   EmailIcon,
   UserIcon,
   MailToIcon,
+  ConstructionIcon,
 };

@@ -17,10 +17,10 @@
       height: 100%;
 
       .mobile {
-        bottom: 0;
-        right: 0;
+        bottom: 0.5rem;
+        right: 0.5rem;
         width: max-content;
-        height: 70%;
+        height: 60%;
       }
 
       img {
@@ -51,18 +51,14 @@
         .links {
           gap: 0.5rem;
 
-          a {
+          .project_link {
             gap: 0.5rem;
             user-select: none;
-
-            span {
-              color: var(--yellow-main);
-              font-size: 1.4rem;
-            }
+            cursor: var(--pointer);
 
             svg {
               color: var(--yellow-main);
-              font-size: 1.8rem;
+              font-size: 2rem;
             }
           }
         }
@@ -81,20 +77,22 @@
 
       .categories {
         width: 100%;
-        flex-wrap: wrap;
 
         div {
-          gap: 0.5rem;
+          row-gap: 0.7rem;
+          flex-wrap: wrap;
         }
 
         .category {
           user-select: none;
-          padding: 0.7rem 1.5rem;
-          background-color: var(--black-tint-1);
-          border-radius: 0.5rem;
+          padding: 0.3rem 1.5rem;
           font-size: 1.2rem;
           color: var(--white-main);
-          border: 1px solid var(--border-1);
+          border-left: 1px solid var(--border-1);
+
+          &:last-child {
+            border-right: 1px solid var(--border-1);
+          }
         }
       }
     }
@@ -158,11 +156,16 @@
 
       .project_image {
         aspect-ratio: 1.5;
+
+        .mobile {
+          bottom: 1rem;
+        }
       }
 
       .project_details {
         background-color: var(--black-tint-3);
         padding: 1.5rem;
+        padding-bottom: 1.7rem;
         border-radius: 1rem;
       }
     }

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./projectCard.scss";
-import { UrlIcon } from "constants/icons";
+import { ConstructionIcon, UrlIcon } from "constants/icons";
 import { urlFor } from "utilities";
 import { LazyComponent } from "components/lazy";
 
@@ -35,15 +35,22 @@ export const ProjectCardComponent = ({
             </div>
 
             <div className="links">
-              {url && (
+              {url ? (
                 <Link
                   className="project_link flex items-center"
                   to={url}
+                  title={url}
                   target="_blank"
                 >
                   <UrlIcon />
-                  <span>live site</span>
                 </Link>
+              ) : (
+                <div
+                  className="project_link flex items-center"
+                  title="Under construction"
+                >
+                  <ConstructionIcon />
+                </div>
               )}
             </div>
           </div>
@@ -53,7 +60,7 @@ export const ProjectCardComponent = ({
           </div>
           {textStacks && (
             <div className="project_con flex col categories">
-              <span>Stack:</span>
+              <span>Made with:</span>
               <div className="flex items-center">
                 {textStacks.map((stack, _key) => (
                   <div className="category" key={_key}>
