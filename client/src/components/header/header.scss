@@ -2,12 +2,15 @@ header {
   top: 0;
   width: 100%;
   padding: 1.5rem;
+  height: 6.5rem;
   z-index: 10;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 
   .nav_wrapper {
     max-width: var(--mx-1);
     margin: 0 auto;
+    height: 100%;
+    width: 100%;
     gap: 1rem;
     z-index: 10;
 
@@ -89,19 +92,13 @@ header {
 
     .right_nav {
       gap: 0.5rem;
+      height: 100%;
 
       .menu {
-        height: 5rem;
         font-weight: 500;
-        padding: 0 1.2rem;
-        border-radius: 5rem;
-        background-color: var(--black-tint-2);
-        border: 1px solid var(--border-1);
-        overflow: hidden;
         gap: 0.5rem;
         color: var(--white-main);
         cursor: var(--pointer);
-        padding: 0 1.2rem 0 2rem;
         display: none;
       }
 
@@ -154,7 +151,8 @@ header {
       padding: 2.5rem 3rem;
       background-color: var(--black-tint-2);
       margin: 0 auto;
-      border-radius: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
       border: 1px solid var(--border-1);
 
       .mobile_menu-top {
@@ -191,9 +189,6 @@ header {
   }
 
   @media screen and (max-width: 600px) {
-    // border-bottom: 1px solid var(--border-2);
-    // backdrop-filter: blur(0px);
-    // background-color: var(--black-tint-1);
     padding: 1rem 1.5rem;
 
     .nav_wrapper {

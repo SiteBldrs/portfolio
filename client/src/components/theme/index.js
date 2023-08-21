@@ -16,33 +16,21 @@ export const ThemeComponent = ({
   setTheme,
   handleThemeChange,
 }) => {
-  const desktopMode = [
+  const themes = [
     {
       name: "Light",
-      image: lightMode,
+      desktop: lightMode,
+      mobile: lightModeMobile,
     },
     {
       name: "Dark",
-      image: darkMode,
+      desktop: darkMode,
+      mobile: darkModeMobile,
     },
     {
       name: "Deem",
-      image: deemMode,
-    },
-  ];
-
-  const mobileMode = [
-    {
-      name: "Light",
-      image: lightModeMobile,
-    },
-    {
-      name: "Dark",
-      image: darkModeMobile,
-    },
-    {
-      name: "Deem",
-      image: deemModeMobile,
+      desktop: deemMode,
+      mobile: deemModeMobile,
     },
   ];
 
@@ -60,48 +48,26 @@ export const ThemeComponent = ({
           <CloseIcon onClick={() => setOpenThemeContainer(false)} />
         </div>
 
-        <div className="themes">
-          {/* desktop mode */}
-          <div className="desktop_mode flex col">
-            {desktopMode.map((mode, _key) => (
-              <div
-                title={mode.name}
-                className="individual flex col"
-                onClick={() => {
-                  handleThemeChange(mode.name.toLowerCase());
-                  setTimeout(() => {
-                    setOpenThemeContainer(false);
-                  }, 1000);
-                }}
-                key={_key}
-              >
-                <div className="theme_image">
-                  <LazyComponent src={mode.image} alt={mode.name} />
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="themes flex col justify-between">
+          {themes.map((theme, _key) => (
+            <div
+              title={theme.name}
+              className="theme_image relative"
+              key={_key}
+              onClick={() => {
+                handleThemeChange(theme.name.toLowerCase());
+                setTimeout(() => {
+                  setOpenThemeContainer(false);
+                }, 1000);
+              }}
+            >
+              <LazyComponent src={theme.desktop} alt={theme.name} />
 
-          {/* mobile mode */}
-          <div className="mobile_mode flex col">
-            {mobileMode.map((mode, _key) => (
-              <div
-                title={mode.name}
-                className="individual flex col"
-                onClick={() => {
-                  handleThemeChange(mode.name.toLowerCase());
-                  setTimeout(() => {
-                    setOpenThemeContainer(false);
-                  }, 1000);
-                }}
-                key={_key}
-              >
-                <div className="theme_image">
-                  <LazyComponent src={mode.image} alt={mode.name} />
-                </div>
+              <div className="theme_image-mobile absolute">
+                <LazyComponent src={theme.mobile} alt={theme.name} />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

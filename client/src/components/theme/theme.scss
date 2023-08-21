@@ -54,50 +54,20 @@
     }
 
     .themes {
-      padding: 2rem 1.5rem;
+      padding: 3rem 1.5rem;
       overflow-y: auto;
       height: calc(100% - 6rem);
-      gap: 1.5rem;
+      gap: 3rem;
 
-      .desktop_mode,
-      .mobile_mode {
-        gap: 1.5rem;
-      }
+      .theme_image {
+        cursor: var(--pointer);
+        height: max-content;
 
-      .mobile_mode {
-        display: none;
-        gap: 3rem;
-
-        .theme_image {
-          height: 50rem;
-        }
-      }
-
-      .individual {
-        gap: 1rem;
-
-        .theme_image {
-          aspect-ratio: 1.5;
-          width: 100%;
-          cursor: var(--pointer);
-
-          img {
-            object-fit: contain;
-          }
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .theme_content {
-      .themes {
-        .desktop_mode {
-          display: none;
-        }
-
-        .mobile_mode {
-          display: flex;
+        .theme_image-mobile {
+          bottom: 0;
+          right: 0;
+          height: 70%;
+          width: max-content;
         }
       }
     }
