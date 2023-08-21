@@ -48,7 +48,7 @@ export const ThemeComponent = ({
           <CloseIcon onClick={() => setOpenThemeContainer(false)} />
         </div>
 
-        <div className="themes flex col justify-between">
+        <div className="themes flex col justify-center">
           {themes.map((theme, _key) => (
             <div
               title={theme.name}
