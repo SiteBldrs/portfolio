@@ -4,11 +4,26 @@ import { socials, about_content } from "constants";
 import { Link } from "react-router-dom";
 import { me } from "assets";
 import { LazyComponent } from "components";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const DocumentPage = () => {
+  const baseYear = 2019;
+  const currentYear = new Date().getFullYear();
+  const [yearsOfExperience, setYearsOfExperience] = useState(
+    currentYear - baseYear
+  );
+
   useEffect(() => {
     document.title = "Concerning myself";
+
+    const interval = setInterval(() => {
+      const newYear = new Date().getFullYear();
+      setYearsOfExperience(newYear - baseYear);
+    }, 1000); // Update every second
+
+    return () => {
+      clearInterval(interval); // Cleanup the interval when the component unmounts
+    };
   }, []);
 
   return (
@@ -23,11 +38,10 @@ export const DocumentPage = () => {
           Developer
         </h1>
         <p className="subtitle">
-          With over 5 years of dedicated experience in the field of web
-          development, I'm not just a React Developer – I'm a solutions
-          architect. I thrive on tailoring innovative solutions to my clients'
-          unique needs, crafting high-quality web applications that drive
-          companies towards their objectives.
+          I'm a solutions architect with over {yearsOfExperience} years of
+          devoted experience in the web development industry. I love creating
+          custom web applications that help businesses achieve their goals by
+          adapting innovative solutions to their specific needs.
         </p>
         <div className="about_me flex col">
           {about_content.map((content, _key) => (
@@ -35,7 +49,17 @@ export const DocumentPage = () => {
               <h3>{content.title}</h3>
               <p>{content.subtitle}</p>
               {content.lists && (
-                <ul className="flex col">
+                <ul
+                  style={{
+                    display: content?.wrap ? "grid" : "flex",
+                    flexDirection: !content?.wrap && "column",
+                    gridTemplateColumns:
+                      content?.wrap && "repeat(auto-fit, minmax(10rem, 1fr))",
+                    gap: !content?.wrap && "0.5rem",
+                    columnGap: content?.wrap && "1rem",
+                    rowGap: content?.wrap && "0.5rem",
+                  }}
+                >
                   {content?.lists?.map((list, _key) => (
                     <li key={_key}>{list}</li>
                   ))}

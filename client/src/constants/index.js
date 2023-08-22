@@ -1,3 +1,4 @@
+/* eslint-disable no-script-url */
 import {
   TwitterIcon,
   InstagramIcon,
@@ -64,14 +65,19 @@ export const about_content = [
     title: "IT Stacks",
     subtitle:
       "I'm able to create outstanding digital experiences thanks to my expertise in technology stacks:",
+    wrap: true,
     lists: [
-      "ReactJS: The bedrock of dynamic and interactive front-end development.",
-      "Next.js: Elevating web applications with optimized page navigation and rendering.",
-      "Tailwind CSS: For visually striking designs that seamlessly adapt across devices.",
-      "HTML & CSS: The essentials for structuring and styling content with finesse.",
-      // eslint-disable-next-line no-script-url
-      "JavaScript: Fueling interactivity and functionality.",
-      "TypeScript: Elevating code quality through enhanced type safety.",
+      "HTML & CSS",
+      "SASS",
+      "Tailwind CSS",
+      "JavaScript",
+      "ReactJS",
+      "TypeScript",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "Appwrite",
+      "Sanity",
     ],
   },
   {
