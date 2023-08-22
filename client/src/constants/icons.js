@@ -2,36 +2,38 @@ import {
   BiChevronDown as DownArrow,
   BiChevronUp as UpArrow,
   BiChevronsRight as RightArrow,
+  BiMessageSquareDetail as AboutPageIcon,
 } from "react-icons/bi";
-import { IoOpenOutline as UrlIcon } from "react-icons/io5";
-import { IoIosArrowRoundBack as BackArrow } from "react-icons/io";
-import { IoClose as CloseIcon } from "react-icons/io5";
-import { HiOutlineAdjustmentsHorizontal as AdjustmentIcon } from "react-icons/hi2";
-import { AiOutlineStar as StarIcon } from "react-icons/ai";
-import { AiOutlineFolderOpen as PreviewIcon } from "react-icons/ai";
-
-// navbar
-import { RiHomeLine as HomePageIcon } from "react-icons/ri";
-import { BiMessageSquareDetail as AboutPageIcon } from "react-icons/bi";
-import { BsFolder2Open as ProjectsPageIcon } from "react-icons/bs";
-import { LiaToolsSolid as ToolsPageIcon } from "react-icons/lia";
-import { TbError404 as ErrorPageIcon } from "react-icons/tb";
+import {
+  IoOpenOutline as UrlIcon,
+  IoClose as CloseIcon,
+  IoConstructOutline as ConstructionIcon,
+} from "react-icons/io5";
+import {
+  AiOutlineStar as StarIcon,
+  AiOutlineFolderOpen as PreviewIcon,
+} from "react-icons/ai";
+import {
+  RiHomeLine as HomePageIcon,
+  RiUser4Line as UserIcon,
+} from "react-icons/ri";
+import {
+  TbError404 as ErrorPageIcon,
+  TbBrandMailgun as MailToIcon,
+  TbBrandTwitterFilled as TwitterIcon,
+} from "react-icons/tb";
 import {
   GoCodeReview as ReviewsPageIcon,
   GoWorkflow as QualificationsPageIcon,
 } from "react-icons/go";
-
-// form
-import { RiUser4Line as UserIcon } from "react-icons/ri";
 import {
   PiUser as FirstNameIcon,
   PiUsers as LastNameIcon,
 } from "react-icons/pi";
-import { TbBrandMailgun as MailToIcon } from "react-icons/tb";
-import { IoConstructOutline as ConstructionIcon } from "react-icons/io5";
-
-// socials
-import { TbBrandTwitterFilled as TwitterIcon } from "react-icons/tb";
+import { IoColorPaletteOutline as AdjustmentIcon } from "react-icons/io5";
+import { IoIosArrowRoundBack as BackArrow } from "react-icons/io";
+import { BsFolder2Open as ProjectsPageIcon } from "react-icons/bs";
+import { LiaToolsSolid as ToolsPageIcon } from "react-icons/lia";
 import { RxInstagramLogo as InstagramIcon } from "react-icons/rx";
 import { FaGithub as GithubIcon } from "react-icons/fa";
 import { GrLinkedin as LinkedInIcon } from "react-icons/gr";

@@ -34,8 +34,7 @@ export const DocumentPage = () => {
 
       <div className="document_container-left">
         <h1 className="title">
-          Hi there 👋 <br /> My name is Abdullahi Salihu, and I'm a React
-          Developer
+          Hi there 👋 <br /> I'm Abdullahi Salihu, a React Developer
         </h1>
         <p className="subtitle">
           I'm a solutions architect with over {yearsOfExperience} years of
