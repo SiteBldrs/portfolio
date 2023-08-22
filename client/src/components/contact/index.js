@@ -13,7 +13,7 @@ export const ContactComponent = () => {
   const formRef = useRef();
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(null);
-  const [isError, setIsError] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();

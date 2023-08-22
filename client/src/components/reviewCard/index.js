@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/heading-has-content */
 import "./reviewCard.scss";
-import { Star } from "utilities";
+import { Star } from "utils";
 import moment from "moment";
 
 export const ReviewCardComponent = ({

@@ -19,18 +19,38 @@ export const DocumentPage = () => {
 
       <div className="document_container-left">
         <h1 className="title">
-          Hello, my name is Abdullahi Salihu, and I'm a React Developer
+          Hi there 👋 <br /> My name is Abdullahi Salihu, and I'm a React
+          Developer
         </h1>
-        <div className="about_me">
-          {about_content.map((content, _id) => (
-            <p className="subtitle" key={_id}>
-              {content}
-            </p>
+        <p className="subtitle">
+          With over 5 years of dedicated experience in the field of web
+          development, I'm not just a React Developer – I'm a solutions
+          architect. I thrive on tailoring innovative solutions to my clients'
+          unique needs, crafting high-quality web applications that drive
+          companies towards their objectives.
+        </p>
+        <div className="about_me flex col">
+          {about_content.map((content, _key) => (
+            <div key={_key} className="descriptions  flex col">
+              <h3>{content.title}</h3>
+              <p>{content.subtitle}</p>
+              {content.lists && (
+                <ul className="flex col">
+                  {content?.lists?.map((list, _key) => (
+                    <li key={_key}>{list}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
+          <p>
+            Let's collaborate on transforming your ideas into digital realities
+            that not only meet your needs but exceed your expectations.
+          </p>
         </div>
       </div>
 
-      <div className="document_container-right flex col">
+      <div className="document_container-right flex col sticky">
         <div className="image_holder desktop_img">
           <LazyComponent src={me} alt="Abdullahi Salihu" />
         </div>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./projectCard.scss";
 import { ConstructionIcon, UrlIcon } from "constants/icons";
-import { urlFor } from "utilities";
+import { urlFor } from "utils";
 import { LazyComponent } from "components/lazy";
 
 export const ProjectCardComponent = ({

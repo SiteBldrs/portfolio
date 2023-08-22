@@ -5,31 +5,24 @@ import {
 } from "components";
 import "./reviews.scss";
 import { useEffect, useState } from "react";
-import client from "utilities";
+import client, { fetchReviews } from "utils";
 import { Link } from "react-router-dom";
 
 export const ReviewsPage = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const fetchData = () => {
     client
-      .fetch(
-        `*[_type == "reviews"] {
-          clientName,
-          reviewContent,
-          dateAdded,
-          rating
-      } | order(_createdAt desc)`
-      )
+      .fetch(fetchReviews)
       .then((res) => {
         setData(res);
         setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setIsError(err.message);
+        setIsError(true);
         setIsLoading(false);
       });
   };

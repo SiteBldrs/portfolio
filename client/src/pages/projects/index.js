@@ -5,32 +5,23 @@ import {
 } from "components";
 import "./projects.scss";
 import { useEffect, useState } from "react";
-import client from "utilities";
+import client, { fetchProjects } from "utils";
 
 export const ProjectsPage = () => {
   const [data, setData] = useState([]);
-  const [isError, setIsError] = useState("");
+  const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = () => {
     client
-      .fetch(
-        `*[_type == "projects"] {
-          name,
-          description,
-          url,
-          textStacks,
-          imageDesktop,
-          imageMobile
-      } | order(_createdAt desc)`
-      )
+      .fetch(fetchProjects)
       .then((res) => {
         setData(res);
         setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setIsError(err.message);
+        setIsError(true);
         setIsLoading(false);
       });
   };
@@ -68,7 +59,9 @@ export const ProjectsPage = () => {
         {isLoading ? (
           <LoadingProjectCardComponent />
         ) : isError ? (
-          <ErrorComponent />
+          <div className="project_container-details">
+            <ErrorComponent />
+          </div>
         ) : (
           data?.map((project, _id) => (
             <ProjectCardComponent {...project} key={_id} />

@@ -60,8 +60,46 @@ export const socials = [
 ];
 
 export const about_content = [
-  "As a Developer, I am passionate about tailoring solutions to my clients' needs and developing high-quality web apps that help companies achieve their objectives. Web design and development, software creation and modification, mobile app development, IT consulting, digital transformation, and unique product engineering are some of the services I provide. I provide a variety of services to assist my clients in realizing their goals.",
-  "Based on my expertise and experience, I strive to provide the finest service possible. By integrating cutting-edge technology, I can ensure that my customers receive high-quality solutions that are tailored to their individual needs and goals.",
-  "My goal as a developer is to create software and web applications that improve people's lives. I take a complete approach to programming, always keeping the user experience in mind and creating software that is intuitive, responsive, and visually appealing.",
-  "When I'm not working on web development projects, I like to keep up with the newest methodologies and trends in the industry. In my spare time, I also enjoy learning new things.",
+  {
+    title: "IT Stacks",
+    subtitle:
+      "I'm able to create outstanding digital experiences thanks to my expertise in technology stacks:",
+    lists: [
+      "ReactJS: The bedrock of dynamic and interactive front-end development.",
+      "Next.js: Elevating web applications with optimized page navigation and rendering.",
+      "Tailwind CSS: For visually striking designs that seamlessly adapt across devices.",
+      "HTML & CSS: The essentials for structuring and styling content with finesse.",
+      // eslint-disable-next-line no-script-url
+      "JavaScript: Fueling interactivity and functionality.",
+      "TypeScript: Elevating code quality through enhanced type safety.",
+    ],
+  },
+  {
+    title: "What I Offer",
+    subtitle:
+      "As a developer dedicated to your success, I provide a variety of services, including:",
+    lists: [
+      "Web design and development",
+      "Software customization and creation",
+      "Mobile app development",
+      "Strategic IT consulting",
+      "Enabling digital transformation",
+      "Crafting unique product engineering solutions",
+    ],
+  },
+  {
+    title: "Customer-Centered Approach:",
+    subtitle:
+      "I'm committed to delivering excellence while being guided by experience and knowledge. With the help of cutting-edge technology, I can provide services that are specifically designed to meet your needs.",
+  },
+  {
+    title: "Goals and Objectives:",
+    subtitle:
+      "As a developer, it is my goal to improve people's lives through software and web applications. I write all of my code with the intention of producing intuitive, responsive, and visually appealing digital solutions.",
+  },
+  {
+    title: "Beyond Development:",
+    subtitle:
+      "I'm very involved in web development, but I also keep an eye on business trends. Beyond work, my love of learning inspires me to grow and innovate.",
+  },
 ];

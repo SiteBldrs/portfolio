@@ -3,6 +3,7 @@
     padding: 0 1.5rem;
     max-width: var(--mx-1);
     margin: 0 auto;
+    width: 100%;
 
     .title,
     .subtitle {
@@ -23,7 +24,6 @@
   .project_cards {
     margin-top: 7rem;
     padding: 0 1.5rem;
-    // grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 
   @media screen and (max-width: 600px) {

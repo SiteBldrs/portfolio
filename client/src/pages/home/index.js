@@ -9,32 +9,23 @@ import {
 import { Link } from "react-router-dom";
 import { RightArrow } from "constants/icons";
 import { useEffect, useState } from "react";
-import client from "utilities";
+import client, { fetchQualifications } from "utils";
 
 export const HomePage = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const fetchData = () => {
     client
-      .fetch(
-        `*[_type == "qualifications"] {
-          type,
-          company,
-          job,
-          date,
-          description,
-          url
-      } | order(_createdAt desc)`
-      )
+      .fetch(fetchQualifications)
       .then((res) => {
         setData(res);
         setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setIsError(err.message);
+        setIsError(true);
         setIsLoading(false);
       });
   };
@@ -51,8 +42,7 @@ export const HomePage = () => {
   return (
     <div className="home_container">
       <h1 className="title">
-        If you're looking for a highly skilled ReactJs developer, look no
-        further.
+        Are you looking for a highly skilled ReactJs developer? Look no further.
       </h1>
       <p className="subtitle">
         With a strong foundation in HTML, CSS, and JavaScript, I possess the

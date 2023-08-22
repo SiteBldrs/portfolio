@@ -44,3 +44,33 @@ export const Star = ({ stars }) => {
 
   return ratingStar;
 };
+
+export const fetchProjects = `*[_type == "projects"] {
+ name,
+ description,
+ url,
+ textStacks,
+ imageDesktop,
+ imageMobile
+} | order(_createdAt desc)`;
+
+export const fetchQualifications = `*[_type == "qualifications"] {
+ type,
+ company,
+ job,
+ date,
+ description,
+ url
+} | order(_createdAt desc)`;
+
+export const fetchReviews = `*[_type == "reviews"] {
+ clientName,
+ reviewContent,
+ dateAdded,
+ rating
+} | order(_createdAt desc)`;
+
+export const fetchTools = `*[_type == "tools"] {
+ title,
+ items
+} | order(_createdAt desc)`;

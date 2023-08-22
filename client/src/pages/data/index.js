@@ -2,34 +2,25 @@ import "./data.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { BackArrow } from "constants/icons";
 import { useEffect, useState } from "react";
-import client from "utilities";
+import client, { fetchQualifications } from "utils";
 import { ErrorComponent, LoadingToolCardComponent } from "components";
 
 export const QualificationPage = () => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const fetchData = () => {
     client
-      .fetch(
-        `*[_type == "qualifications"] {
-          type,
-          company,
-          job,
-          date,
-          description,
-          url
-      } | order(_createdAt desc)`
-      )
+      .fetch(fetchQualifications)
       .then((res) => {
         setData(res);
         setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setIsError(err.message);
+        setIsError(true);
         setIsLoading(false);
       });
   };

@@ -5,28 +5,23 @@ import {
   ErrorComponent,
 } from "components";
 import { useEffect, useState } from "react";
-import client from "utilities";
+import client, { fetchTools } from "utils";
 
 export const ToolsPage = () => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const fetchData = () => {
     client
-      .fetch(
-        `*[_type == "tools"] {
-          title,
-          items
-      } | order(_createdAt desc)`
-      )
+      .fetch(fetchTools)
       .then((res) => {
         setData(res);
         setIsLoading(false);
       })
       .catch((err) => {
         console.log(err);
-        setIsError(err.message);
+        setIsError(true);
         setIsLoading(false);
       });
   };
