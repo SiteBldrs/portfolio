@@ -85,12 +85,11 @@ export const about_content = [
     subtitle:
       "As a developer dedicated to your success, I provide a variety of services, including:",
     lists: [
-      "Web design and development",
-      "Software customization and creation",
-      "Mobile app development",
-      "Strategic IT consulting",
-      "Enabling digital transformation",
-      "Crafting unique product engineering solutions",
+      "Web development.",
+      "IT strategy consulting.",
+      "Making digital transformation possible.",
+      "Software development and customization.",
+      "Crafting unique product engineering solutions.",
     ],
   },
   {
