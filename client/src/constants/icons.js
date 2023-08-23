@@ -3,6 +3,7 @@ import {
   BiChevronUp as UpArrow,
   BiChevronsRight as RightArrow,
   BiMessageSquareDetail as AboutPageIcon,
+  BiSolidArrowToTop as MoveToTopeIcon,
 } from "react-icons/bi";
 import {
   IoOpenOutline as UrlIcon,
@@ -66,4 +67,5 @@ export {
   UserIcon,
   MailToIcon,
   ConstructionIcon,
+  MoveToTopeIcon,
 };

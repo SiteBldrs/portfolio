@@ -12,6 +12,7 @@ import { ThemeComponent } from "./theme";
 import { ErrorComponent } from "./error";
 import { LazyComponent } from "./lazy";
 import { BannerComponent } from "./banner";
+import { ScrollToTopComponent } from "./scroll";
 
 export {
   HeaderComponent,
@@ -28,4 +29,5 @@ export {
   ErrorComponent,
   LazyComponent,
   BannerComponent,
+  ScrollToTopComponent,
 };

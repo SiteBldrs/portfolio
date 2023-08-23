@@ -1,5 +1,10 @@
 import { banner } from "assets";
-import { HeaderComponent, FooterComponent, ThemeComponent } from "components";
+import {
+  HeaderComponent,
+  FooterComponent,
+  ThemeComponent,
+  ScrollToTopComponent,
+} from "components";
 import { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -50,6 +55,7 @@ export const App = () => {
           <Outlet />
         </main>
         <FooterComponent />
+        <ScrollToTopComponent />
       </div>
     </div>
   );

@@ -1,0 +1,27 @@
+.scroll_container {
+  bottom: 1.7rem;
+  right: 1.7rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--black-tint-2);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8), 0 0 1rem rgba(0, 0, 0, 0.2) inset;
+  border: 1px solid var(--border-1);
+  transform: translateY(10rem);
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+
+  svg {
+    font-size: 2.5rem;
+    color: var(--white-main);
+  }
+}
+
+.show_scroll {
+  opacity: 1;
+  pointer-events: all;
+  cursor: var(--pointer);
+  transform: translateY(0);
+}
