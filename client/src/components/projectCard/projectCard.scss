@@ -1,12 +1,12 @@
 .project_card-container {
   width: 100%;
-  max-height: 35rem;
+  height: 35rem;
   border-radius: 1rem;
   z-index: 1;
 
   .project_card {
     width: 100%;
-    height: max-content;
+    height: 100%;
     padding: 2.5rem;
     z-index: 1;
     gap: 2rem;
