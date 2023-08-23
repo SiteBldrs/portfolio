@@ -11,6 +11,7 @@ import { QualifyCardComponent } from "./qualifyCard";
 import { ThemeComponent } from "./theme";
 import { ErrorComponent } from "./error";
 import { LazyComponent } from "./lazy";
+import { BannerComponent } from "./banner";
 
 export {
   HeaderComponent,
@@ -26,4 +27,5 @@ export {
   ThemeComponent,
   ErrorComponent,
   LazyComponent,
+  BannerComponent,
 };

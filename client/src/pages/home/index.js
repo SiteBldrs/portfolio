@@ -5,6 +5,7 @@ import {
   ContactComponent,
   LoadingReviewCardComponent,
   ErrorComponent,
+  BannerComponent,
 } from "components";
 import { Link } from "react-router-dom";
 import { RightArrow } from "constants/icons";
@@ -41,17 +42,15 @@ export const HomePage = () => {
 
   return (
     <div className="home_container">
-      <h1 className="title">
-        Are you looking for a highly skilled ReactJs developer? Look no further.
-      </h1>
-      <p className="subtitle">
-        With a strong foundation in HTML, CSS, and JavaScript, I possess the
+      <BannerComponent
+        title="Are you looking for a highly skilled ReactJs developer? Look no further."
+        subtitle="With a strong foundation in HTML, CSS, and JavaScript, I possess the
         necessary skills to bring your vision to life. Leveraging the power of
         React, I can develop dynamic and interactive components that enhance
         usability and overall functionality. Whether it's crafting engaging user
         interfaces or optimizing performance, I am committed to delivering
-        high-quality code that meets the highest standards.
-      </p>
+        high-quality code that meets the highest standards."
+      />
 
       <div className="bottom_home-container flex justify-between">
         <div

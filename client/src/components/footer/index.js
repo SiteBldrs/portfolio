@@ -10,7 +10,9 @@ export const FooterComponent = () => {
           {pathNames.map((path, _id) => (
             <NavLink
               to={path.path}
-              className="footer_links"
+              className={({ isActive }) =>
+                `footer_links ${isActive && "active_footer-link"}`
+              }
               title={path.element}
               key={_id}
             >

@@ -3,6 +3,7 @@ import {
   ToolCardComponent,
   LoadingToolCardComponent,
   ErrorComponent,
+  BannerComponent,
 } from "components";
 import { useEffect, useState } from "react";
 import client, { fetchTools } from "utils";
@@ -37,16 +38,14 @@ export const ToolsPage = () => {
 
   return (
     <div className="tools_container">
-      <h1 className="title">
-        I use these apps and services to manage my personal life and complete
-        various tasks.
-      </h1>
-      <p className="subtitle">
-        I get asked a lot about the things I use to build software, stay
+      <BannerComponent
+        title="I use these apps and services to manage my personal life and complete
+        various tasks."
+        subtitle="I get asked a lot about the things I use to build software, stay
         productive, or buy to fool myself into thinking I’m being productive
         when I’m really just procrastinating. Here’s a big list of all of my
-        favorite stuff.
-      </p>
+        favorite stuff."
+      />
 
       <div className="tools_cards flex col">
         {isLoading ? (

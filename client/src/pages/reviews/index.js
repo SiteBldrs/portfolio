@@ -1,4 +1,5 @@
 import {
+  BannerComponent,
   ErrorComponent,
   LoadingReviewCardComponent,
   ReviewCardComponent,
@@ -6,7 +7,6 @@ import {
 import "./reviews.scss";
 import { useEffect, useState } from "react";
 import client, { fetchReviews } from "utils";
-import { Link } from "react-router-dom";
 
 export const ReviewsPage = () => {
   const [data, setData] = useState([]);
@@ -38,17 +38,10 @@ export const ReviewsPage = () => {
 
   return (
     <div className="reviews_container">
-      <h1 className="title">
-        Evaluations, reviews, and comments from clients.
-      </h1>
-      <p className="subtitle">
-        Clients have expressed positive feedback about me, and I would greatly
-        appreciate your feedback. Click{" "}
-        <Link to="" target="_blank">
-          here
-        </Link>{" "}
-        to leave feedback for other clients to see.
-      </p>
+      <BannerComponent
+        title="Evaluations, reviews, and comments from clients."
+        subtitle="I've received good feedback from customers, and I'd love to hear your thoughts. For access to the upload a feedback feature, kindly get in touch with me."
+      />
 
       <div
         className="reviews_cards grid"

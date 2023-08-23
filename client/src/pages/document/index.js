@@ -3,7 +3,7 @@ import "./document.scss";
 import { socials, about_content } from "constants";
 import { Link } from "react-router-dom";
 import { me } from "assets";
-import { LazyComponent } from "components";
+import { BannerComponent, LazyComponent } from "components";
 import { useEffect, useState } from "react";
 
 export const DocumentPage = () => {
@@ -33,15 +33,15 @@ export const DocumentPage = () => {
       </div>
 
       <div className="document_container-left">
-        <h1 className="title">
-          Hi there 👋 <br /> I'm Abdullahi Salihu, a React Developer
-        </h1>
-        <p className="subtitle">
-          I'm a solutions architect with over {yearsOfExperience} years of
+        <BannerComponent
+          title="Hi there 👋 <br /> My name is Abdullahi Salihu, I'm a ReactJs Developer"
+          subtitle={`I'm a solutions architect with over ${yearsOfExperience} years of
           devoted experience in the web development industry. I love creating
           custom web applications that help businesses achieve their goals by
-          adapting innovative solutions to their specific needs.
-        </p>
+          adapting innovative solutions to their specific needs.`}
+        />
+
+        <p className="subtitle"></p>
         <div className="about_me flex col">
           {about_content.map((content, _key) => (
             <div key={_key} className="descriptions  flex col">
