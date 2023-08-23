@@ -3,6 +3,7 @@ import "./projectCard.scss";
 import { ConstructionIcon, UrlIcon } from "constants/icons";
 import { urlFor } from "utils";
 import { LazyComponent } from "components/lazy";
+import { noImage } from "assets";
 
 export const ProjectCardComponent = ({
   name,
@@ -16,8 +17,10 @@ export const ProjectCardComponent = ({
     <div className="project_card-container relative" title={name}>
       <div className="project_card flex items-center">
         <div className="project_image relative">
-          {imageDesktop && (
+          {imageDesktop ? (
             <LazyComponent src={urlFor(imageDesktop).url()} alt={name} />
+          ) : (
+            <LazyComponent src={noImage} alt={name} />
           )}
 
           {imageMobile && (
