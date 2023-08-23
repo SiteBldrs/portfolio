@@ -215,11 +215,12 @@
 
       .categories {
         div {
+          gap: 0.5rem;
           flex-wrap: wrap;
           width: 100%;
 
           span {
-            width: 10rem;
+            width: 8rem;
             height: 2rem;
           }
         }
