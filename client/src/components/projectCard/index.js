@@ -13,7 +13,7 @@ export const ProjectCardComponent = ({
   imageMobile,
 }) => {
   return (
-    <div className="project_card-container relative">
+    <div className="project_card-container relative" title={name}>
       <div className="project_card flex items-center">
         <div className="project_image relative">
           {imageDesktop && (

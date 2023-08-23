@@ -20,7 +20,7 @@ export const FooterComponent = () => {
             </NavLink>
           ))}
         </div>
-        <p>© 2023 Abdullahi Salihu. All rights reserved.</p>
+        <p>Published at: Feb 13, 2023.</p>
       </div>
     </footer>
   );

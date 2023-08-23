@@ -40,8 +40,6 @@ export const DocumentPage = () => {
           custom web applications that help businesses achieve their goals by
           adapting innovative solutions to their specific needs.`}
         />
-
-        <p className="subtitle"></p>
         <div className="about_me flex col">
           {about_content.map((content, _key) => (
             <div key={_key} className="descriptions  flex col">
@@ -53,7 +51,7 @@ export const DocumentPage = () => {
                     display: content?.wrap ? "grid" : "flex",
                     flexDirection: !content?.wrap && "column",
                     gridTemplateColumns:
-                      content?.wrap && "repeat(auto-fit, minmax(10rem, 1fr))",
+                      content?.wrap && "repeat(auto-fit, minmax(13rem, 1fr))",
                     gap: !content?.wrap && "0.5rem",
                     columnGap: content?.wrap && "1rem",
                     rowGap: content?.wrap && "0.5rem",

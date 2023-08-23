@@ -31,12 +31,13 @@
 
         ul {
           margin: 1rem 0;
+          padding-left: 2.3rem;
 
           li {
+            list-style: decimal-leading-zero;
             font-size: 1.4rem;
             line-height: 2.4rem;
             color: var(--white-tint-1);
-            margin-left: 1.3rem;
           }
         }
       }
