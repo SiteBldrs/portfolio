@@ -8,7 +8,6 @@
   z-index: 10;
   opacity: 0;
   pointer-events: none;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8), 0 0 1rem rgba(0, 0, 0, 0.2) inset;
   border: 1px solid var(--border-1);
   transform: translateY(10rem);
   transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
