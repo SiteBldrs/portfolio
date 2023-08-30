@@ -4,6 +4,8 @@ import { ConstructionIcon, UrlIcon } from "constants/icons";
 import { urlFor } from "utils";
 import { LazyComponent } from "components/lazy";
 import { noImage } from "assets";
+import { useScroll, motion, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export const ProjectCardComponent = ({
   name,
@@ -13,8 +15,24 @@ export const ProjectCardComponent = ({
   imageDesktop,
   imageMobile,
 }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.03 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.3, 1]);
+
   return (
-    <div className="project_card-container relative" title={name}>
+    <motion.div
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className="project_card-container relative"
+      title={name}
+    >
       <div className="project_card flex items-center">
         <div className="project_image relative">
           {imageDesktop ? (
@@ -75,7 +93,7 @@ export const ProjectCardComponent = ({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
