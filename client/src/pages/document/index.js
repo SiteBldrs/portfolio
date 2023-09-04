@@ -4,26 +4,11 @@ import { socials, about_content } from "constants";
 import { Link } from "react-router-dom";
 import { me } from "assets";
 import { BannerComponent, LazyComponent } from "components";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export const DocumentPage = () => {
-  const baseYear = 2019;
-  const currentYear = new Date().getFullYear();
-  const [yearsOfExperience, setYearsOfExperience] = useState(
-    currentYear - baseYear
-  );
-
   useEffect(() => {
     document.title = "Concerning myself";
-
-    const interval = setInterval(() => {
-      const newYear = new Date().getFullYear();
-      setYearsOfExperience(newYear - baseYear);
-    }, 1000); // Update every second
-
-    return () => {
-      clearInterval(interval); // Cleanup the interval when the component unmounts
-    };
   }, []);
 
   return (
@@ -35,10 +20,7 @@ export const DocumentPage = () => {
       <div className="document_container-left">
         <BannerComponent
           title="Hi there 👋 <br /> My name is Abdullahi Salihu, I'm a ReactJs Developer"
-          subtitle={`I'm a solutions architect with over ${yearsOfExperience} years of
-          devoted experience in the web development industry. I love creating
-          custom web applications that help businesses achieve their goals by
-          adapting innovative solutions to their specific needs.`}
+          subtitle="With years of experience in web development, I specialize in creating custom web applications that help businesses achieve their goals by adapting innovative solutions."
         />
         <div className="about_me flex col">
           {about_content.map((content, _key) => (

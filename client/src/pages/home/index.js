@@ -48,12 +48,7 @@ export const HomePage = () => {
         <div className="flex col">
           <BannerComponent
             title="Are you looking for a highly skilled ReactJs developer? Look no further."
-            subtitle="With a strong foundation in HTML, CSS, and JavaScript, I possess the
-          necessary skills to bring your vision to life. Leveraging the power of
-          React, I can develop dynamic and interactive components that enhance
-          usability and overall functionality. Whether it's crafting engaging user
-          interfaces or optimizing performance, I am committed to delivering
-          high-quality code that meets the highest standards."
+            subtitle="With expertise in HTML, CSS, and JavaScript, I can create dynamic, interactive components using React, enhancing usability and functionality. I'm dedicated to delivering high-quality code, ensuring engaging user interfaces and performance optimization."
           />
         </div>
         <div className="home_image flex">
