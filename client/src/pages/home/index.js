@@ -59,21 +59,21 @@ export const HomePage = () => {
         <div className="home_image flex">
           <div className="col-1 flex col items-end">
             <div className="home_image-holder">
-              <LazyComponent src={me} alt="me" />
+              {/* <LazyComponent src={me} alt="me" /> */}
             </div>
             <div className="home_image-holder">
-              <LazyComponent src={me} alt="me" />
+              {/* <LazyComponent src={me} alt="me" /> */}
             </div>
             <div className="home_image-holder">
-              <LazyComponent src={me} alt="me" />
+              {/* <LazyComponent src={me} alt="me" /> */}
             </div>
           </div>
           <div className="col-2 flex col items-start">
             <div className="home_image-holder">
-              <LazyComponent src={me} alt="me" />
+              {/* <LazyComponent src={me} alt="me" /> */}
             </div>
             <div className="home_image-holder">
-              <LazyComponent src={me} alt="me" />
+              {/* <LazyComponent src={me} alt="me" /> */}
             </div>
           </div>
         </div>
