@@ -6,13 +6,13 @@ import {
   LoadingReviewCardComponent,
   ErrorComponent,
   BannerComponent,
-  LazyComponent,
+  // LazyComponent,
 } from "components";
 import { Link } from "react-router-dom";
 import { RightArrow } from "constants/icons";
 import { useEffect, useState } from "react";
 import client, { fetchQualifications } from "utils";
-import { me } from "assets";
+// import { me } from "assets";
 
 export const HomePage = () => {
   const [data, setData] = useState([]);
@@ -44,7 +44,7 @@ export const HomePage = () => {
 
   return (
     <div className="home_container">
-      <div className="home_content flex justify-between">
+      <div className="home_content flex justify-between items-center">
         <div className="flex col">
           <BannerComponent
             title="Are you looking for a highly skilled ReactJs developer? Look no further."

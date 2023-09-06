@@ -3,7 +3,8 @@ import "./error.scss";
 export const ErrorComponent = () => {
   return (
     <div className="error_container">
-      <p>For some reason, data could not be fetched</p>
+      <p>Faild to fetch data 😫😫</p>
+      <p>Please check your connections and reload the page.</p>
     </div>
   );
 };
