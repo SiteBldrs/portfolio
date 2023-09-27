@@ -39,12 +39,12 @@ export const pathNames = [
 
 export const socials = [
   {
-    path: "https://twitter.com/tech_bro_4th",
+    path: "https://twitter.com/web_sculptor",
     title: "Twitter",
     icon: <TwitterIcon />,
   },
   {
-    path: "https://www.instagram.com/tech_bro_4th/",
+    path: "https://www.instagram.com/_websculptor_/",
     title: "Instagram",
     icon: <InstagramIcon />,
   },
