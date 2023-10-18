@@ -6,13 +6,13 @@ import {
   LoadingReviewCardComponent,
   ErrorComponent,
   BannerComponent,
-  // LazyComponent,
+  LazyComponent,
 } from "components";
 import { Link } from "react-router-dom";
 import { RightArrow } from "constants/icons";
 import { useEffect, useState } from "react";
 import client, { fetchQualifications } from "utils";
-// import { me } from "assets";
+import { me3, me4, me5, me7, me8 } from "assets";
 
 export const HomePage = () => {
   const [data, setData] = useState([]);
@@ -54,21 +54,21 @@ export const HomePage = () => {
         <div className="home_image flex">
           <div className="col-1 flex col items-end">
             <div className="home_image-holder">
-              {/* <LazyComponent src={me} alt="me" /> */}
+              <LazyComponent src={me7} alt="me" />
             </div>
             <div className="home_image-holder">
-              {/* <LazyComponent src={me} alt="me" /> */}
+              <LazyComponent src={me8} alt="me" />
             </div>
             <div className="home_image-holder">
-              {/* <LazyComponent src={me} alt="me" /> */}
+              <LazyComponent src={me3} alt="me" />
             </div>
           </div>
           <div className="col-2 flex col items-start">
             <div className="home_image-holder">
-              {/* <LazyComponent src={me} alt="me" /> */}
+              <LazyComponent src={me4} alt="me" />
             </div>
             <div className="home_image-holder">
-              {/* <LazyComponent src={me} alt="me" /> */}
+              <LazyComponent src={me5} alt="me" />
             </div>
           </div>
         </div>

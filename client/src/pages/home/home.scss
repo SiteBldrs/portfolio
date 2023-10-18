@@ -38,6 +38,7 @@
 
           img {
             object-fit: cover;
+            transform: scale(1.1);
           }
         }
       }
@@ -79,7 +80,6 @@
     @media screen and (max-width: 900px) {
       .home_image {
         display: none;
-        padding: 0 1rem;
       }
     }
 
@@ -91,6 +91,50 @@
         display: flex;
         width: 100%;
         justify-content: center;
+        gap: 1rem;
+
+        .col-1,
+        .col-2 {
+          gap: 1rem;
+        }
+
+        .col-1 {
+          .home_image-holder {
+            &:first-child {
+              max-width: 10rem;
+              width: 100%;
+              border-radius: 2rem 2rem 0 2rem;
+            }
+
+            &:nth-child(2) {
+              max-width: 15rem;
+              width: 100%;
+              border-radius: 2rem 0 0 2rem;
+            }
+
+            &:nth-child(3) {
+              max-width: 10rem;
+              width: 100%;
+              border-radius: 2rem 0 2rem 2rem;
+            }
+          }
+        }
+
+        .col-2 {
+          .home_image-holder {
+            &:first-child {
+              max-width: 26.5rem;
+              width: 100%;
+              border-radius: 2rem 2rem 2rem 0;
+            }
+
+            &:last-child {
+              max-width: 15rem;
+              width: 100%;
+              border-radius: 0 2rem 2rem 2rem;
+            }
+          }
+        }
       }
     }
   }
