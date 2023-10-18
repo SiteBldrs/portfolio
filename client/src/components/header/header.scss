@@ -190,6 +190,8 @@ header {
 
   @media screen and (max-width: 600px) {
     padding: 1rem 2rem;
+    backdrop-filter: none;
+    background-color: var(--black-main);
 
     .nav_wrapper {
       .nav_container {
