@@ -18,8 +18,8 @@
   --not-allowed: not-allowed;
   --my: 10rem;
 
-  --mx: 125.6rem;
-  --mx-1: 110rem;
+  // --mx: 125.6rem;
+  --mx-1: 124rem;
   --mx-2: 67.3rem;
 
   --default-font: ui-sans-serif, system-ui, -apple-system, "system-ui",
@@ -62,9 +62,9 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 
-  @media screen and (min-width: 2560px) {
-    font-size: 122.5%;
-  }
+  // @media screen and (min-width: 2560px) {
+  //   font-size: 122.5%;
+  // }
 
   @media screen and (max-width: 1024px) {
     font-size: 60%;
@@ -235,8 +235,6 @@ html {
 
     .app_container {
       background-color: var(--black-tint-1);
-      border-left: 1px solid var(--border-1);
-      border-right: 1px solid var(--border-1);
       max-width: var(--mx);
       margin: 0 auto;
       min-height: 100vh;
