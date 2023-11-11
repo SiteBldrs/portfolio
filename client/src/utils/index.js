@@ -45,7 +45,7 @@ export const Star = ({ stars }) => {
   return ratingStar;
 };
 
-export const fetchProjects = `*[_type == "projects"] {
+export const fetchProjects = `*[_type == "projects"] | order(_createdAt desc) {
  name,
  description,
  url,
@@ -54,7 +54,7 @@ export const fetchProjects = `*[_type == "projects"] {
  imageMobile
 } | order(_createdAt desc)`;
 
-export const fetchQualifications = `*[_type == "qualifications"] {
+export const fetchQualifications = `*[_type == "qualifications"] | order(_createdAt desc) {
  type,
  company,
  job,
@@ -63,14 +63,14 @@ export const fetchQualifications = `*[_type == "qualifications"] {
  url
 } | order(_createdAt desc)`;
 
-export const fetchReviews = `*[_type == "reviews"] {
+export const fetchReviews = `*[_type == "reviews"] | order(_createdAt desc) {
  clientName,
  reviewContent,
  dateAdded,
  rating
 } | order(_createdAt desc)`;
 
-export const fetchTools = `*[_type == "tools"] {
+export const fetchTools = `*[_type == "tools"] | order(_createdAt desc) {
  title,
  items
 } | order(_createdAt desc)`;
